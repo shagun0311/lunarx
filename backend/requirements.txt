@@ -1,0 +1,24 @@
+# LUNARX Scientific Backend Dependencies
+# Python 3.10+
+
+# Web Framework & Validation
+fastapi>=0.110.0,<1.0.0
+uvicorn[standard]>=0.29.0,<1.0.0
+pydantic>=2.6.0,<3.0.0
+pydantic-settings>=2.2.0,<3.0.0
+
+# HTTP & API Clients (NASA JPL Horizons)
+httpx>=0.27.0,<1.0.0
+aiohttp>=3.9.0,<4.0.0
+
+# Scientific & Astrodynamics Libraries
+numpy>=1.26.0,<2.0.0
+scipy>=1.12.0,<2.0.0
+astropy>=6.0.0,<7.0.0
+skyfield>=1.48,<2.0.0
+
+# NASA SPICE Toolkit Bridge (Optional: required for native binary kernels)
+# spiceypy>=6.0.0,<7.0.0
+
+# Raster & Geospatial (NASA LOLA PDS processing)
+# rasterio>=1.3.9

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#090f22" />
+      <stop offset="100%" stop-color="#050811" />
+    </radialGradient>
+    <radialGradient id="moonGlow" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="60%" stop-color="#cbd5e1" />
+      <stop offset="85%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </radialGradient>
+    <radialGradient id="cyanHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="70%" stop-color="#00E5FF" stop-opacity="0" />
+      <stop offset="88%" stop-color="#00E5FF" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#00E5FF" stop-opacity="0" />
+    </radialGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep Navy Background -->
+  <rect width="512" height="512" rx="100" fill="url(#spaceBg)" />
+
+  <!-- Outer Cyan Telemetry Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#00E5FF" stroke-width="2" stroke-dasharray="24 16 8 16" opacity="0.4" />
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#00E5FF" stroke-width="1.5" stroke-dasharray="60 30" opacity="0.25" />
+
+  <!-- Atmosphere Halo -->
+  <circle cx="256" cy="256" r="190" fill="url(#cyanHalo)" />
+
+  <!-- Moon Body -->
+  <circle cx="256" cy="256" r="170" fill="url(#moonGlow)" filter="url(#softGlow)" />
+
+  <!-- Lunar Maria (Dark Basalt Plains) -->
+  <path d="M 180 180 Q 230 160 270 200 Q 290 240 240 270 Q 190 280 170 230 Z" fill="#334155" opacity="0.45" />
+  <path d="M 270 260 Q 320 250 350 290 Q 340 340 290 350 Q 250 330 260 290 Z" fill="#334155" opacity="0.35" />
+  <path d="M 170 290 Q 210 290 230 330 Q 210 370 170 360 Q 140 330 160 300 Z" fill="#334155" opacity="0.3" />
+
+  <!-- Craters -->
+  <!-- Tycho / Major Crater with rays -->
+  <circle cx="310" cy="340" r="14" fill="#1e293b" opacity="0.7" stroke="#e2e8f0" stroke-width="1.5" />
+  <circle cx="310" cy="340" r="6" fill="#0f172a" />
+  <!-- Copernicus -->
+  <circle cx="210" cy="230" r="12" fill="#1e293b" opacity="0.6" stroke="#94a3b8" stroke-width="1" />
+  <!-- Shackleton (South Pole Target Beacon) -->
+  <circle cx="256" cy="410" r="10" fill="#00E5FF" opacity="0.8" stroke="#ffffff" stroke-width="2" />
+  <circle cx="256" cy="410" r="22" fill="none" stroke="#00E5FF" stroke-width="1.5" opacity="0.6" stroke-dasharray="4 4" />
+
+  <!-- Artemis Target Vector Reticle -->
+  <line x1="256" y1="50" x2="256" y2="80" stroke="#00E5FF" stroke-width="2" opacity="0.7" />
+  <line x1="256" y1="432" x2="256" y2="462" stroke="#00E5FF" stroke-width="2" opacity="0.7" />
+  <line x1="50" y1="256" x2="80" y2="256" stroke="#00E5FF" stroke-width="2" opacity="0.7" />
+  <line x1="432" y1="256" x2="462" y2="256" stroke="#00E5FF" stroke-width="2" opacity="0.7" />
+
+  <!-- Brand Typography Overlay -->
+  <text x="256" y="270" font-family="'JetBrains Mono', monospace" font-size="34" font-weight="900" fill="#050811" text-anchor="middle" letter-spacing="4" opacity="0.85">LUNAR<tspan fill="#00E5FF">X</tspan></text>
+</svg>

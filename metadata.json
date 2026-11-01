@@ -1,0 +1,6 @@
+{
+  "name": "LUNARX - Lunar Landing Site Evaluation Platform",
+  "description": "NASA-inspired mission control platform for evaluating lunar landing locations, solar illumination, terrain slope, Earth communications, and site comparisons.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
